@@ -112,9 +112,10 @@ fig, ax = plt.subplots(1,1)
 ax.quiver(SM, FM, SDOTM, FDOTM, color = 'r')
 ax.plot(sss, fss, 'sk', label = 'Steady State')
 ax.plot(0, 0, 'xk')
-nc_s_space = np.linspace(0, 500, 1000)
-ax.plot(nc_s_space, nullcline_sdot(nc_s_space,  gamma, beta, alpha, eta, rho), '-.g', label = '$\dot{s} = 0$')
-ax.plot(nc_s_space, nullcline_fdot(nc_s_space,  gamma, beta, alpha, eta, rho), ':k', label = '$\dot{f} = 0$')
+nc_s_space = np.linspace(0, s_lim, 1000)
+nc_s_space = np.linspace(0, f_lim, 1000)
+#ax.plot(nc_s_space, nullcline_sdot(nc_s_space,  gamma, beta, alpha, eta, rho), '-.g', label = '$\dot{s} = 0$')
+#ax.plot(nc_f_space, nullcline_fdot(nc_f_space,  gamma, beta, alpha, eta, rho), ':k', label = '$\dot{f} = 0$')
 
 #################################
 # Plot trajectories
@@ -167,7 +168,7 @@ plt.savefig('phase_portrait.png')
 
 
 ###########################################
-# Nullclines
+# Difference in nullclines
 ###########################################
 
 fig, ax = plt.subplots(1,1)
@@ -180,5 +181,5 @@ ax.set_xlabel('Singletons, $s$')
 ax.set_ylabel('Fused nullcline difference,\n $g(s) - l(s)$')
 
 plt.tight_layout()
-plt.savefig('nullcline_difference.svg')
+#plt.savefig('nullcline_difference.svg')
 plt.savefig('nullcline_difference.png')
