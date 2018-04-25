@@ -4,7 +4,13 @@ Code associated with [INSERT TITLE]
 
 ## Installation
 
-After cloning the repository, then perform the following commands
+Clone the repository
+
+```
+$ git clone --recursive https://github.com/ImperialCollegeLondon/MitoNetworksGenetics.git
+```
+
+to make sure you get the mitonetworks repository too. Then perform the following commands
 
 ```
 $ cd mitonetworks
