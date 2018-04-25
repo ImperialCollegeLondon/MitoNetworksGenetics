@@ -1,0 +1,557 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.1' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     17664,        548]
+NotebookOptionsPosition[     15602,        473]
+NotebookOutlinePosition[     16108,        493]
+CellTagsIndexPosition[     16065,        490]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["\<\
+Steady state solution for 1D network system with preferential singleton \
+degradation
+\
+\>", "Title",
+ CellChangeTimes->{{3.704516417999195*^9, 3.7045164240943537`*^9}, {
+  3.704518316057872*^9, 3.704518346361623*^9}, {3.704615855277123*^9, 
+  3.704615855787752*^9}, {3.705837374944664*^9, 3.705837374984008*^9}}],
+
+Cell[BoxData[
+ RowBox[{"(*", "\n", 
+  RowBox[{"\[Alpha]", " ", "=", " ", 
+   RowBox[{
+    RowBox[{
+    "Global", " ", "biogenesis", " ", "upregulation", "\n", "\[Eta]"}], " ", 
+    "=", " ", 
+    RowBox[{
+     RowBox[{
+     "singleton", " ", "selective", " ", "degradation", " ", "rate", "\n", 
+      "\[Rho]"}], " ", "=", " ", 
+     RowBox[{
+      RowBox[{"Baseline", " ", "global", " ", 
+       RowBox[{"biogenesis", "/", "degradation"}], " ", "rate", "\n", 
+       "\[Gamma]"}], " ", "=", " ", 
+      RowBox[{
+       RowBox[{"single", "-", 
+        RowBox[{"species", " ", "fusion", " ", "rate", "\n", "\[Beta]"}]}], 
+       " ", "=", " ", 
+       RowBox[{"fission", " ", "rate"}]}]}]}]}]}], "\n", "*)"}]], "Input",
+ CellChangeTimes->{{3.7046158604005737`*^9, 3.70461590420732*^9}, 
+   3.705836669424967*^9, {3.7058373749972982`*^9, 3.705837375035248*^9}, {
+   3.733657603410899*^9, 3.733657603418338*^9}, {3.733657670430023*^9, 
+   3.733657671967432*^9}, {3.733657805333438*^9, 3.73365780757364*^9}}],
+
+Cell[CellGroupData[{
+
+Cell["\<\
+Increased singleton degradation and global biogenesis upregulation\
+\>", "Chapter",
+ CellChangeTimes->{{3.7058371476375628`*^9, 3.705837164940879*^9}, {
+  3.7058373751149054`*^9, 3.705837375264078*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ss", " ", "=", " ", 
+  RowBox[{"Solve", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{
+       RowBox[{
+        RowBox[{"\[Gamma]", " ", 
+         RowBox[{"s", "^", "2"}]}], " ", "+", " ", 
+        RowBox[{"\[Gamma]", " ", "s", " ", "f"}], " ", "-", " ", 
+        RowBox[{"\[Beta]", " ", "f"}], " ", "+", " ", 
+        RowBox[{"\[Alpha]", " ", "\[Rho]", "  ", "f"}], " ", "-", " ", 
+        RowBox[{"\[Rho]", " ", "f"}]}], " ", "\[Equal]", " ", "0"}], ",", 
+      "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{
+        RowBox[{
+         RowBox[{"-", "\[Gamma]"}], " ", 
+         RowBox[{"s", "^", "2"}]}], " ", "-", " ", 
+        RowBox[{"\[Gamma]", " ", "s", " ", "f"}], " ", "+", " ", 
+        RowBox[{"\[Beta]", " ", "f"}], " ", "+", " ", 
+        RowBox[{"\[Alpha]", " ", "\[Rho]", "   ", "s"}], " ", "-", " ", 
+        RowBox[{"\[Eta]", " ", "\[Rho]", "  ", "s"}]}], " ", "\[Equal]", " ", 
+       "0"}]}], "}"}], " ", ",", " ", 
+    RowBox[{"{", 
+     RowBox[{"s", ",", " ", "f"}], "}"}]}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.704516440183757*^9, 3.70451644904181*^9}, {
+   3.704516612474435*^9, 3.704516646217218*^9}, {3.704516677145609*^9, 
+   3.704516692096918*^9}, 3.704609976973405*^9, {3.705836341520751*^9, 
+   3.7058363466959267`*^9}, {3.705836669149086*^9, 3.705836697981266*^9}, {
+   3.705836767486322*^9, 3.705836812630522*^9}, {3.705836898277893*^9, 
+   3.705836934012657*^9}, {3.705837374828154*^9, 3.70583740450732*^9}, {
+   3.733657591043549*^9, 3.733657612158928*^9}, 3.733658052245954*^9}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"s", "\[Rule]", "0"}], ",", 
+     RowBox[{"f", "\[Rule]", "0"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"s", "\[Rule]", 
+      FractionBox[
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{"\[Alpha]", "-", "\[Eta]"}], ")"}], " ", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"-", "\[Beta]"}], "-", "\[Rho]", "+", 
+          RowBox[{"\[Alpha]", " ", "\[Rho]"}]}], ")"}]}], 
+       RowBox[{"\[Gamma]", " ", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"-", "1"}], "+", "\[Eta]"}], ")"}]}]]}], ",", 
+     RowBox[{"f", "\[Rule]", 
+      RowBox[{"-", 
+       FractionBox[
+        RowBox[{
+         SuperscriptBox[
+          RowBox[{"(", 
+           RowBox[{"\[Alpha]", "-", "\[Eta]"}], ")"}], "2"], " ", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"-", "\[Beta]"}], "-", "\[Rho]", "+", 
+           RowBox[{"\[Alpha]", " ", "\[Rho]"}]}], ")"}]}], 
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"-", "1"}], "+", "\[Alpha]"}], ")"}], " ", "\[Gamma]", " ", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"-", "1"}], "+", "\[Eta]"}], ")"}]}]]}]}]}], "}"}]}], 
+  "}"}]], "Output",
+ CellChangeTimes->{3.733658024827118*^9, 3.733658143284937*^9, 
+  3.733658307998416*^9, 3.733658615654908*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ss2", " ", "=", " ", 
+  RowBox[{"Solve", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{
+       RowBox[{
+        RowBox[{"gamma", " ", 
+         RowBox[{"s", "^", "2"}]}], " ", "+", " ", 
+        RowBox[{"gamma", " ", "s", " ", "f"}], " ", "-", " ", 
+        RowBox[{"beta", " ", "f"}], " ", "+", " ", 
+        RowBox[{"alpha", " ", "rho", "  ", "f"}], " ", "-", " ", 
+        RowBox[{"rho", " ", "f"}]}], " ", "\[Equal]", " ", "0"}], ",", 
+      RowBox[{
+       RowBox[{
+        RowBox[{
+         RowBox[{"-", "gamma"}], " ", 
+         RowBox[{"s", "^", "2"}]}], " ", "-", " ", 
+        RowBox[{"gamma", " ", "s", " ", "f"}], " ", "+", " ", 
+        RowBox[{"beta", " ", "f"}], " ", "+", " ", 
+        RowBox[{"alpha", " ", "rho", "   ", "s"}], " ", "-", " ", 
+        RowBox[{"eta", " ", "rho", "  ", "s"}]}], " ", "\[Equal]", " ", 
+       "0"}]}], "}"}], " ", ",", " ", 
+    RowBox[{"{", 
+     RowBox[{"s", ",", " ", "f"}], "}"}]}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.705837646960106*^9, 3.70583768184816*^9}, 
+   3.7058407962524242`*^9, {3.733658243197631*^9, 3.7336582622301197`*^9}, {
+   3.733658369950549*^9, 3.733658379052459*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"s", "\[Rule]", "0"}], ",", 
+     RowBox[{"f", "\[Rule]", "0"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"s", "\[Rule]", 
+      FractionBox[
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{"alpha", "-", "eta"}], ")"}], " ", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"-", "beta"}], "-", "rho", "+", 
+          RowBox[{"alpha", " ", "rho"}]}], ")"}]}], 
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"-", "1"}], "+", "eta"}], ")"}], " ", "gamma"}]]}], ",", 
+     RowBox[{"f", "\[Rule]", 
+      RowBox[{"-", 
+       FractionBox[
+        RowBox[{
+         SuperscriptBox[
+          RowBox[{"(", 
+           RowBox[{"alpha", "-", "eta"}], ")"}], "2"], " ", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"-", "beta"}], "-", "rho", "+", 
+           RowBox[{"alpha", " ", "rho"}]}], ")"}]}], 
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"-", "1"}], "+", "alpha"}], ")"}], " ", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"-", "1"}], "+", "eta"}], ")"}], " ", "gamma"}]]}]}]}], 
+    "}"}]}], "}"}]], "Output",
+ CellChangeTimes->{3.733658308072188*^9, 3.733658379748405*^9, 
+  3.733658615741588*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"FortranForm", "[", 
+  FractionBox[
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{"alpha", "-", "eta"}], ")"}], " ", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"-", "beta"}], "-", "rho", "+", 
+      RowBox[{"alpha", " ", "rho"}]}], ")"}]}], 
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"-", "1"}], "+", "eta"}], ")"}], " ", "gamma"}]], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.705838341628807*^9, 3.705838351337925*^9}, {
+  3.733658242064514*^9, 3.733658262298978*^9}, {3.733658389722529*^9, 
+  3.733658390074856*^9}}],
+
+Cell["((alpha - eta)*(-beta - rho + alpha*rho))/((-1 + eta)*gamma)", "Output",
+ CellChangeTimes->{3.733658308130877*^9, 3.7336583907543983`*^9, 
+  3.733658615803081*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"FortranForm", "[", 
+  RowBox[{"-", 
+   FractionBox[
+    RowBox[{
+     SuperscriptBox[
+      RowBox[{"(", 
+       RowBox[{"alpha", "-", "eta"}], ")"}], "2"], " ", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"-", "beta"}], "-", "rho", "+", 
+       RowBox[{"alpha", " ", "rho"}]}], ")"}]}], 
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"-", "1"}], "+", "alpha"}], ")"}], " ", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"-", "1"}], "+", "eta"}], ")"}], " ", "gamma"}]]}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.705837691378214*^9, 3.705837696198174*^9}, {
+  3.7058377297905283`*^9, 3.70583772997472*^9}, {3.733658242248148*^9, 
+  3.7336582624584713`*^9}, {3.733658397051556*^9, 3.733658397226653*^9}}],
+
+Cell["\<\
+-(((alpha - eta)**2*(-beta - rho + alpha*rho))/((-1 + alpha)*(-1 + \
+eta)*gamma))\
+\>", "Output",
+ CellChangeTimes->{3.7336583082686663`*^9, 3.733658397691856*^9, 
+  3.7336586158692217`*^9}]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[StyleBox["Nullclines", "Subchapter"]], "Chapter",
+ CellChangeTimes->{{3.705837926673099*^9, 3.705837929281061*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"\[IndentingNewLine]", 
+  RowBox[{"FullSimplify", "[", 
+   RowBox[{"Solve", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       RowBox[{"gamma", " ", 
+        RowBox[{"s", "^", "2"}]}], " ", "+", " ", 
+       RowBox[{"gamma", " ", "s", " ", "f"}], " ", "-", " ", 
+       RowBox[{"beta", " ", "f"}], " ", "+", " ", 
+       RowBox[{"alpha", " ", "rho", "  ", "f"}], " ", "-", " ", 
+       RowBox[{"rho", " ", "f"}]}], " ", "\[Equal]", "0"}], ",", " ", "f"}], 
+    "]"}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.705837934669894*^9, 3.70583798440534*^9}, {
+  3.7336582424626217`*^9, 3.733658262626184*^9}, {3.733658566476301*^9, 
+  3.733658566618585*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"{", 
+   RowBox[{"f", "\[Rule]", 
+    FractionBox[
+     RowBox[{"gamma", " ", 
+      SuperscriptBox["s", "2"]}], 
+     RowBox[{"beta", "+", "rho", "-", 
+      RowBox[{"alpha", " ", "rho"}], "-", 
+      RowBox[{"gamma", " ", "s"}]}]]}], "}"}], "}"}]], "Output",
+ CellChangeTimes->{3.733658308419561*^9, 3.73365861597418*^9}]
+}, Open  ]],
+
+Cell["", "Input",
+ CellChangeTimes->{{3.733658242522518*^9, 3.733658262693282*^9}, 
+   3.7336582983282537`*^9}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"FullSimplify", "[", 
+  RowBox[{"Solve", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       RowBox[{"-", "gamma"}], " ", 
+       RowBox[{"s", "^", "2"}]}], " ", "-", " ", 
+      RowBox[{"gamma", " ", "s", " ", "f"}], " ", "+", " ", 
+      RowBox[{"beta", " ", "f"}], " ", "+", " ", 
+      RowBox[{"alpha", " ", "rho", "   ", "s"}], " ", "-", " ", 
+      RowBox[{"eta", " ", "rho", "  ", "s"}]}], "\[Equal]", " ", "0"}], ",", 
+    " ", "f"}], "]"}], "]"}]], "Input",
+ CellChangeTimes->{{3.705838022446004*^9, 3.7058380643307543`*^9}, {
+  3.705838150515996*^9, 3.705838150754839*^9}, {3.733658242644946*^9, 
+  3.733658262717057*^9}, {3.733658576717142*^9, 3.733658576926881*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"{", 
+   RowBox[{"f", "\[Rule]", 
+    FractionBox[
+     RowBox[{"s", " ", 
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"-", "alpha"}], " ", "rho"}], "+", 
+        RowBox[{"eta", " ", "rho"}], "+", 
+        RowBox[{"gamma", " ", "s"}]}], ")"}]}], 
+     RowBox[{"beta", "-", 
+      RowBox[{"gamma", " ", "s"}]}]]}], "}"}], "}"}]], "Output",
+ CellChangeTimes->{3.733658308580097*^9, 3.733658616048161*^9}]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[StyleBox["Derivatives", "Subchapter"]], "Chapter",
+ CellChangeTimes->{{3.705837809257783*^9, 3.705837819289744*^9}, {
+  3.705837917105165*^9, 3.705837918065436*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"FortranForm", "[", 
+  RowBox[{"D", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"gamma", " ", 
+      RowBox[{"s", "^", "2"}]}], " ", "+", " ", 
+     RowBox[{"gamma", " ", "s", " ", "f"}], " ", "-", " ", 
+     RowBox[{"beta", " ", "f"}], " ", "+", " ", 
+     RowBox[{"alpha", " ", "rho", "  ", "f"}], " ", "-", " ", 
+     RowBox[{"rho", " ", "f"}]}], ",", "s"}], "]"}], "]"}]], "Input",
+ CellChangeTimes->{{3.705837821717226*^9, 3.705837849086072*^9}, {
+  3.733658242862417*^9, 3.7336582628194647`*^9}, {3.733658591912133*^9, 
+  3.733658592684155*^9}}],
+
+Cell["f*gamma + 2*gamma*s", "Output",
+ CellChangeTimes->{3.733658308693925*^9, 3.7336586160892973`*^9}]
+}, Open  ]],
+
+Cell["", "Input",
+ CellChangeTimes->{{3.7336582557014313`*^9, 3.7336582845514603`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"FortranForm", "[", 
+  RowBox[{"D", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"gamma", " ", 
+      RowBox[{"s", "^", "2"}]}], " ", "+", " ", 
+     RowBox[{"gamma", " ", "s", " ", "f"}], " ", "-", " ", 
+     RowBox[{"beta", " ", "f"}], " ", "+", " ", 
+     RowBox[{"alpha", " ", "rho", "  ", "f"}], " ", "-", " ", 
+     RowBox[{"rho", " ", "f"}]}], ",", "f"}], "]"}], "]"}]], "Input",
+ CellChangeTimes->{{3.705838231146823*^9, 3.705838231306985*^9}, {
+  3.733658242874366*^9, 3.733658262833478*^9}, {3.733658603802445*^9, 
+  3.733658604575976*^9}}],
+
+Cell["-beta - rho + alpha*rho + gamma*s", "Output",
+ CellChangeTimes->{3.733658308748603*^9, 3.733658616138626*^9}]
+}, Open  ]],
+
+Cell["", "Input",
+ CellChangeTimes->{{3.733658242876733*^9, 3.733658286583741*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"FortranForm", "[", 
+  RowBox[{"D", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{
+      RowBox[{"-", "gamma"}], " ", 
+      RowBox[{"s", "^", "2"}]}], " ", "-", " ", 
+     RowBox[{"gamma", " ", "s", " ", "f"}], " ", "+", " ", 
+     RowBox[{"beta", " ", "f"}], " ", "+", " ", 
+     RowBox[{"alpha", " ", "rho", "   ", "s"}], " ", "-", " ", 
+     RowBox[{"eta", " ", "rho", "  ", "s"}]}], ",", "s"}], "]"}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.705838247754252*^9, 3.705838249890448*^9}, {
+  3.733658243008787*^9, 3.733658262932715*^9}, {3.733658608435132*^9, 
+  3.733658609146319*^9}}],
+
+Cell["-(f*gamma) + alpha*rho - eta*rho - 2*gamma*s", "Output",
+ CellChangeTimes->{3.733658308804476*^9, 3.733658616197476*^9}]
+}, Open  ]],
+
+Cell["", "Input",
+ CellChangeTimes->{{3.7336582430229073`*^9, 3.733658288264234*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"FortranForm", "[", 
+  RowBox[{"D", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{
+      RowBox[{"-", "gamma"}], " ", 
+      RowBox[{"s", "^", "2"}]}], " ", "-", " ", 
+     RowBox[{"gamma", " ", "s", " ", "f"}], " ", "+", " ", 
+     RowBox[{"beta", " ", "f"}], " ", "+", " ", 
+     RowBox[{"alpha", " ", "rho", "   ", "s"}], " ", "-", " ", 
+     RowBox[{"eta", " ", "rho", "  ", "s"}]}], ",", "f"}], "]"}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.705838262219285*^9, 3.7058382623225193`*^9}, {
+  3.733658243178893*^9, 3.733658263064488*^9}, {3.733658611698021*^9, 
+  3.733658612464724*^9}}],
+
+Cell["beta - gamma*s", "Output",
+ CellChangeTimes->{3.73365830885955*^9, 3.733658616252282*^9}]
+}, Open  ]],
+
+Cell["", "Input",
+ CellChangeTimes->{{3.733658256124049*^9, 3.733658256187048*^9}, 
+   3.733658290071431*^9}]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{1383, 876},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+PrintingCopies->1,
+PrintingPageRange->{Automatic, Automatic},
+PrintingOptions->{"PaperOrientation"->"Portrait",
+"PaperSize"->{594.75, 842.25},
+"PostScriptOutputFile"->""},
+FrontEndVersion->"10.1 for Linux x86 (64-bit) (March 23, 2015)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 323, 7, 207, "Title"],
+Cell[906, 31, 1004, 23, 165, "Input"],
+Cell[CellGroupData[{
+Cell[1935, 58, 212, 4, 66, "Chapter"],
+Cell[CellGroupData[{
+Cell[2172, 66, 1565, 33, 55, "Input"],
+Cell[3740, 101, 1381, 42, 55, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[5158, 148, 1186, 28, 32, "Input"],
+Cell[6347, 178, 1310, 42, 55, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[7694, 225, 557, 17, 59, "Input"],
+Cell[8254, 244, 169, 2, 46, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[8460, 251, 755, 22, 62, "Input"],
+Cell[9218, 275, 200, 5, 46, "Output"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[9467, 286, 129, 1, 59, "Chapter"],
+Cell[CellGroupData[{
+Cell[9621, 291, 678, 16, 55, "Input"],
+Cell[10302, 309, 362, 10, 54, "Output"]
+}, Open  ]],
+Cell[10679, 322, 111, 2, 32, InheritFromParent],
+Cell[CellGroupData[{
+Cell[10815, 328, 716, 16, 32, "Input"],
+Cell[11534, 346, 467, 14, 51, "Output"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[12050, 366, 179, 2, 59, "Chapter"],
+Cell[CellGroupData[{
+Cell[12254, 372, 574, 13, 32, "Input"],
+Cell[12831, 387, 103, 1, 46, "Output"]
+}, Open  ]],
+Cell[12949, 391, 87, 1, 32, InheritFromParent],
+Cell[CellGroupData[{
+Cell[13061, 396, 572, 13, 32, "Input"],
+Cell[13636, 411, 115, 1, 46, "Output"]
+}, Open  ]],
+Cell[13766, 415, 83, 1, 32, InheritFromParent],
+Cell[CellGroupData[{
+Cell[13874, 420, 611, 15, 32, "Input"],
+Cell[14488, 437, 126, 1, 46, "Output"]
+}, Open  ]],
+Cell[14629, 441, 85, 1, 32, InheritFromParent],
+Cell[CellGroupData[{
+Cell[14739, 446, 613, 15, 32, "Input"],
+Cell[15355, 463, 95, 1, 46, "Output"]
+}, Open  ]],
+Cell[15465, 467, 109, 2, 32, InheritFromParent]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
