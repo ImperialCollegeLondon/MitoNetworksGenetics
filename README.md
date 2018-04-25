@@ -3,6 +3,9 @@
 Code associated with [INSERT TITLE] 
 
 ## Installation
+
+After cloning the repository, then perform the following commands
+
 ```
 $ cd mitonetworks
 $ python setup.py sdist 
