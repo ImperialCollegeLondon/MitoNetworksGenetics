@@ -1,19 +1,19 @@
 # MitoNetworksGenetics
 
-Code associated with <INSERT TITLE> 
+Code associated with [INSERT TITLE] 
+
+## Installation
+```
+$ cd mitonetworks
+$ python setup.py sdist 
+$ pip install ./dist/mitonetworks-0.0.1.tar.gz
+```
 
 ## Directories
 
 ### mitonetworks
 
 - A `python` package with various classes and helper functions for analysis and data processing
-
-- Installation:
-```
-$ cd mitonetworks
-$ python setup.py sdist 
-$ pip install ./dist/mitonetworks-0.0.1.tar.gz
-```
 
 ### Simple_Network_Process
 
