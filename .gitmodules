@@ -1,0 +1,4 @@
+[submodule "mitonetworks"]
+	path = mitonetworks
+	url = https://github.com/ImperialCollegeLondon/mitonetworks.git
+	branch = master
