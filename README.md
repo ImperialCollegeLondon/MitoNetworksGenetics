@@ -10,7 +10,7 @@ Clone the repository
 $ git clone --recursive https://github.com/ImperialCollegeLondon/MitoNetworksGenetics.git
 ```
 
-to make sure you get the mitonetworks repository too. Then perform the following commands
+to make sure you get the mitonetworks repository too. Much of the python code depends on the mitonetworks package which contains a set of helper functions and classes. To install this package, perform the following commands
 
 ```
 $ cd mitonetworks
