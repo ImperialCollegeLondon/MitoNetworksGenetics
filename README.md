@@ -27,3 +27,7 @@ $ pip install ./dist/mitonetworks-0.0.1.tar.gz
 ### Simple_Network_Process
 
 - Deterministic treatment of a simple network process, Figure XXX
+
+### Linear_Feedback_Control
+
+- Analytic treatment of linear feedback control, with the deterministic steady state and a proof of a stochastic differential equation for heteroplasmy
