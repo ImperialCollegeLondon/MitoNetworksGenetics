@@ -30,4 +30,10 @@ $ pip install ./dist/mitonetworks-0.0.1.tar.gz
 
 ### Linear_Feedback_Control
 
-- Analytic treatment of linear feedback control, with the deterministic steady state and a proof of a stochastic differential equation for heteroplasmy
+- `Deterministic_phase_portrait` : Generates Figure XXX
+- `Deterministic_Steady_State`: Mathematica notebook to find deterministic steady state
+- `Nominal_parametrization` : Python code to find nominal parameterization 
+- `Proof_Vh` : Analytic treatment of linear feedback control proving V(h) formula 
+- `Stochastic_analysis` : Python code to perform parameter sweeps, Figure XXX
+
+ deterministic steady state and a proof of a stochastic differential equation for heteroplasmy
