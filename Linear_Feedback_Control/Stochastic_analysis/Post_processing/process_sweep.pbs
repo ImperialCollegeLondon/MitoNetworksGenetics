@@ -1,9 +1,0 @@
-#!/bin/sh
-#PBS -N proc_0
-#PBS -l walltime=10:00:00
-#PBS -J 0-141
-#PBS -l select=1:ncpus=1:mem=2gb
-module load anaconda3/personal
-WORK_DIR="/work/ja1109/networks/sing_birth_fus/param_sweep/100_param"
-cd $WORK_DIR
-python Process_stoch_sim.py $PBS_ARRAY_INDEX
