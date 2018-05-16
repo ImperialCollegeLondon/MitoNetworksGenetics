@@ -1,0 +1,10 @@
+#!/bin/sh
+#PBS -N CLC_SW_99
+#PBS -l walltime=20:00:00
+#PBS -l select=1:ncpus=1:mem=1gb
+#PBS -J 0-999
+cp $PBS_O_WORKDIR/closed_loop_deg_single.ce $TMPDIR
+./closed_loop_deg_single.ce 582071 99 1000 $PBS_ARRAY_INDEX 15 6 705 273 0.0 0.3312 0.01506892513 -813.0 1.24165230759e-05 0.023 1.0
+cp output_99_$PBS_ARRAY_INDEX.txt $PBS_O_WORKDIR/p099
+sleep 10
+rm $PBS_O_WORKDIR/CLC_SW_*
