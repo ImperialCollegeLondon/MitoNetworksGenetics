@@ -1,0 +1,9 @@
+#PBS -N Z_dd_2
+#PBS -l walltime=46:00:00
+#PBS -l select=1:ncpus=1:mem=1gb
+#PBS -J 0-999
+cp $PBS_O_WORKDIR/Z_diff_deg.ce $TMPDIR
+./Z_diff_deg.ce 722105 2 1000 $PBS_ARRAY_INDEX 963 37 386 15 0.0 2.08973072492 2.38826368562e-05 1000.0 0.023 1.0
+cp output_2_$PBS_ARRAY_INDEX.txt $PBS_O_WORKDIR/p2
+sleep 10
+rm $PBS_O_WORKDIR/Z_dd_*

@@ -1,0 +1,9 @@
+#PBS -N G_rd_70
+#PBS -l walltime=20:00:00
+#PBS -l select=1:ncpus=1:mem=1gb
+#PBS -J 0-999
+cp $PBS_O_WORKDIR/G_ratiometric_deg.ce $TMPDIR
+./G_ratiometric_deg.ce 339400 70 1000 $PBS_ARRAY_INDEX 200 930 86 400 0.0 13.1853094887 0.0378514285714 200.0 0.023
+cp output_70_$PBS_ARRAY_INDEX.txt $PBS_O_WORKDIR/p70
+sleep 10
+rm $PBS_O_WORKDIR/G_rd_*

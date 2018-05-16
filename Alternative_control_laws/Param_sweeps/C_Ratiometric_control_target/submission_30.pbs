@@ -1,0 +1,9 @@
+#PBS -N C_RC_30
+#PBS -l walltime=20:00:00
+#PBS -l select=1:ncpus=1:mem=1gb
+#PBS -J 0-999
+cp $PBS_O_WORKDIR/C_ratio_ctrl.ce $TMPDIR
+./C_ratio_ctrl.ce 942667 30 1000 $PBS_ARRAY_INDEX 890 90 376 38 0.0 524.916625343 0.0378514285714 1.0 1000.0 0.023
+cp output_30_$PBS_ARRAY_INDEX.txt $PBS_O_WORKDIR/p30
+sleep 10
+rm $PBS_O_WORKDIR/C_RC_*

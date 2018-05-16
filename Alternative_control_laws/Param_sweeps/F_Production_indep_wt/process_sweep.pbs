@@ -1,0 +1,17 @@
+#!/bin/sh
+#PBS -N proc_B
+#PBS -l walltime=20:00:00
+#PBS -J 0-120
+#PBS -l select=1:ncpus=1:mem=4gb
+module load anaconda2/personal
+
+printf -v DATA_DIR "p%d" $PBS_ARRAY_INDEX
+
+cp $PBS_O_WORKDIR/$DATA_DIR/output* $TMPDIR
+
+cp $PBS_O_WORKDIR/Process_stoch_sim.py $TMPDIR
+
+python Process_stoch_sim.py $PBS_ARRAY_INDEX 8
+
+cp online_stats*.csv $PBS_O_WORKDIR
+

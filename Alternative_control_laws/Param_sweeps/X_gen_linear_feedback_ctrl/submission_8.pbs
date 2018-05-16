@@ -1,0 +1,13 @@
+#!/bin/sh
+#PBS -J 80001-90000
+#PBS -N X_SW_8
+#PBS -l walltime=24:00:00
+#PBS -l select=1:ncpus=1:mem=1gb
+ARGS=$(head -$PBS_ARRAY_INDEX $PBS_O_WORKDIR/comm | tail -1 )
+OUTDIRVAL=$(head -$PBS_ARRAY_INDEX $PBS_O_WORKDIR/comm_dir | tail -1 )
+printf -v DATA_DIR "p%d" $OUTDIRVAL
+cp $PBS_O_WORKDIR/X_gen_lin_feedback.ce $TMPDIR
+./X_gen_lin_feedback.ce $ARGS
+cp output* $PBS_O_WORKDIR/$DATA_DIR
+sleep 10
+rm $PBS_O_WORKDIR/X_SW*

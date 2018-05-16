@@ -1,0 +1,9 @@
+#PBS -N B_DC_31
+#PBS -l walltime=20:00:00
+#PBS -l select=1:ncpus=1:mem=1gb
+#PBS -J 0-999
+cp $PBS_O_WORKDIR/B_diff_ctrl.ce $TMPDIR
+./B_diff_ctrl.ce 502656 31 1000 $PBS_ARRAY_INDEX 907 93 382 39 0.0 1318.53094887 0.0950784898418 1.0 1000.0 0.023
+cp output_31_$PBS_ARRAY_INDEX.txt $PBS_O_WORKDIR/p31
+sleep 10
+rm $PBS_O_WORKDIR/B_DC_*

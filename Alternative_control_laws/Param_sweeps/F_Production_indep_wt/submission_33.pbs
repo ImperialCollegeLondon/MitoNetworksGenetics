@@ -1,0 +1,9 @@
+#PBS -N F_piw_33
+#PBS -l walltime=20:00:00
+#PBS -l select=1:ncpus=1:mem=1gb
+#PBS -J 0-999
+cp $PBS_O_WORKDIR/F_prod_indep_wt.ce $TMPDIR
+./F_prod_indep_wt.ce 851624 33 1000 $PBS_ARRAY_INDEX 217 42 86 17 0.0 0.3312 5.99904714678e-05 5 0.023
+cp output_33_$PBS_ARRAY_INDEX.txt $PBS_O_WORKDIR/p33
+sleep 10
+rm $PBS_O_WORKDIR/F_piw_*

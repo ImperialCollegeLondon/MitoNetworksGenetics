@@ -1,0 +1,10 @@
+#!/bin/sh
+#PBS -N CLC_SW_76
+#PBS -l walltime=20:00:00
+#PBS -l select=1:ncpus=1:mem=1gb
+#PBS -J 0-999
+cp $PBS_O_WORKDIR/relaxed_replication_network.ce $TMPDIR
+./relaxed_replication_network.ce 860914 76 1000 $PBS_ARRAY_INDEX 6 3 690 296 0.0 83.1936786116 9.50784898418 1 1000 0.023 1.0
+cp output_76_$PBS_ARRAY_INDEX.txt $PBS_O_WORKDIR/p076
+sleep 10
+rm $PBS_O_WORKDIR/CLC_SW_*

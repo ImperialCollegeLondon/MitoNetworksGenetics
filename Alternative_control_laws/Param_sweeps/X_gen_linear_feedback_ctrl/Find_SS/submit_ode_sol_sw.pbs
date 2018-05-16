@@ -1,0 +1,13 @@
+#!/bin/sh
+#PBS -N RR_SW
+#PBS -l walltime=24:00:00
+#PBS -l select=1:ncpus=1:mem=1gb
+#PBS -J 0-120
+module load anaconda2/personal
+
+cp $PBS_O_WORKDIR/X_gen_lin_ctrl.py $TMPDIR
+python X_gen_lin_ctrl.py $PBS_ARRAY_INDEX 0.3 86400
+cp ode_sol* $PBS_O_WORKDIR
+
+# sleep 10
+# rm $PBS_O_WORKDIR/CLC_SW_*

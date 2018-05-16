@@ -1,0 +1,9 @@
+#PBS -N Y_lfd_13
+#PBS -l walltime=23:00:00
+#PBS -l select=1:ncpus=1:mem=1gb
+#PBS -J 0-999
+cp $PBS_O_WORKDIR/Y_linear_feedback_deg.ce $TMPDIR
+./Y_linear_feedback_deg.ce 704673 13 1000 $PBS_ARRAY_INDEX 673 35 289 15 0.0 2.08973072492 5.99904714678e-05 1000.0 0.0001 0.023 1.0
+cp output_13_$PBS_ARRAY_INDEX.txt $PBS_O_WORKDIR/p13
+sleep 10
+rm $PBS_O_WORKDIR/Y_lfd_*
