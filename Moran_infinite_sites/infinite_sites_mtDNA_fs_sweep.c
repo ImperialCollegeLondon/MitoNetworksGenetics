@@ -1,5 +1,5 @@
 /*
-Simulating the infinite alleles model with Moran steps
+Simulating the infinite sites model with Moran steps
 
 5.6 × 10− 7 mutations/bp/doubling
 https://www.sciencedirect.com/science/article/pii/S0005272815001103#bb0440
