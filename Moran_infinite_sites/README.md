@@ -1,6 +1,6 @@
-# Infinite alleles Moran model for mtDNA
+# Infinite sites Moran model for mtDNA
 
-An infinite alleles model with continuous time and Moran steps, where every Moran step has a binomially distributed number of mutation events.
+An infinite sites model with continuous time and Moran steps, where every Moran step has a binomially distributed number of mutation events.
 
 To make data
 
