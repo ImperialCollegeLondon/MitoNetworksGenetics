@@ -1,0 +1,10 @@
+#!/bin/sh
+#PBS -N CLC_Q_fs_SD_159
+#PBS -l walltime=02:00:00
+#PBS -l select=1:ncpus=1:mem=1gb
+#PBS -J 0-999
+cp $PBS_O_WORKDIR/closed_loop_deg_single_SD.ce $TMPDIR
+./closed_loop_deg_single_SD.ce 66020 159 1000 $PBS_ARRAY_INDEX 0.3 1000 0.0 33.12 0.0599904714678 -194.0 1.24165230759e-05 0.023 1.0 1.001
+cp output_159_$PBS_ARRAY_INDEX.txt $PBS_O_WORKDIR/p159
+sleep 10
+rm $PBS_O_WORKDIR/CLC_Q_fs_SD_*
