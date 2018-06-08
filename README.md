@@ -2,6 +2,8 @@
 
 Code associated with [INSERT TITLE] 
 
+[TO DO: Assign figure numbers to readme]
+
 ## Installation
 
 Clone the repository
@@ -20,6 +22,11 @@ $ pip install ./dist/mitonetworks-0.0.1.tar.gz
 
 ## Directories
 
+### Alternative_control_laws
+
+- `Param_sweeps` : Parameter sweeps for a set of replication/degradation rate functions, Figure XXX
+- `Vh_proofs` : Heteroplasmy variance proofs for a set of feedback control laws
+
 ### mitonetworks
 
 - A `python` package with various classes and helper functions for analysis and data processing
@@ -30,10 +37,22 @@ $ pip install ./dist/mitonetworks-0.0.1.tar.gz
 
 ### Linear_Feedback_Control
 
+- ` Ablate_fusion_fission` : Deterministic analysis reducing the fusion and fission rates, Figure XXX
 - `Deterministic_phase_portrait` : Generates Figure XXX
 - `Deterministic_Steady_State`: Mathematica notebook to find deterministic steady state
 - `Nominal_parametrization` : Python code to find nominal parameterization 
 - `Proof_Vh` : Analytic treatment of linear feedback control proving V(h) formula 
+- `Quality_control` : Exploration of selective mitophagy and selective fusion, Figure XXX
 - `Stochastic_analysis` : Python code to perform parameter sweeps, Figure XXX
 
- deterministic steady state and a proof of a stochastic differential equation for heteroplasmy
+ ### Moran_infinite_sites
+
+ - Exploration of the infinite sites Moran model, Figure XXX
+
+ ### Simple_moran
+
+ - Exploration of a biallelic Moran model, Figure XXX
+
+ ### Simple_Network_Process
+
+ - Exploration of a network process with constant rates, Figure XXX
