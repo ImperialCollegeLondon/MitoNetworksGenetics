@@ -63,4 +63,4 @@ To summarise the locations of the proofs in the paper [To do: complete table]
 
 | Formula | Description | Directory|
 |:-------:|:-----------:|:--------:|
-|<a href="https://www.codecogs.com/eqnedit.php?latex=\mathbb{V}(h))" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\mathbb{V}(h))" title="\mathbb{V}(h))" /></a> | LFC |	`Linear_Feedback_Control/Proof_Vh` |
+|<a href="https://www.codecogs.com/eqnedit.php?latex=\mathbb{V}(h))" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\mathbb{V}(h)" title="\mathbb{V}(h))" /></a> | LFC |	`Linear_Feedback_Control/Proof_Vh` |
