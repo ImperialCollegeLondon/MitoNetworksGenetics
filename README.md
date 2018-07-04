@@ -56,3 +56,11 @@ $ pip install ./dist/mitonetworks-0.0.1.tar.gz
  ### Simple_Network_Process
 
  - Exploration of a network process with constant rates, Figure XXX
+
+## Proofs
+
+To summarise the locations of the proofs in the paper [To do: complete table]
+
+| Formula | Description | Directory|
+|:-------:|:-----------:|:--------:|
+|$\mathbb{V}(h) = $ | LFC |	`Linear_Feedback_Control/Proof_Vh` |
