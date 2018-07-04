@@ -1,0 +1,9 @@
+#PBS -N mu_sw_1
+#PBS -l walltime=20:00:00
+#PBS -l select=1:ncpus=1:mem=1gb
+#PBS -J 0-999
+cp $PBS_O_WORKDIR/closed_loop_deg_single.ce $TMPDIR
+./closed_loop_deg_single.ce 930992 1 1000 $PBS_ARRAY_INDEX 326 373 140 160 0.0 33.12 0.0378514285714 -483.25 1.24165230759e-05 0.0345 1.0
+cp output_1_$PBS_ARRAY_INDEX.txt $PBS_O_WORKDIR/p1
+sleep 10
+rm $PBS_O_WORKDIR/mu_sw_*
