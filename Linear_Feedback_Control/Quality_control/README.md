@@ -15,4 +15,4 @@ To make data for any particular control law run 1-5. To just make plots, run 6.
 
 ## Deterministic analysis
 
-To make data, run the `.py` script on a cluster (takes several hours). To make plots, run the Jupyter notebook.
+`QC_sweep` directory. To make data, run the `.py` script on a cluster (takes several hours). To make plots, run the Jupyter notebook.
