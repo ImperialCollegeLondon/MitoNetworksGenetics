@@ -1,4 +1,6 @@
-# Stochastic analysis of quality control in a linear feedback control
+# Analysis of quality control in a linear feedback control
+
+## Stochastic analysis
 
 Parameter sweeps for two models of quality control: selective degradation and selective fusion
 
@@ -10,3 +12,7 @@ To make data for any particular control law run 1-5. To just make plots, run 6.
 4. When done, copy the file `process_sweep.pbs` and `Process_stoch_sim.py` onto HPC and then `qsub process_sweep.pbs`
 5. When done, this will generate the contents of the `Data` folder. Copy from cluster into the `Data` folder
 6. To generate plots, run the notebook in the `Analysis` subdirectory
+
+## Deterministic analysis
+
+To make data, run the `.py` script on a cluster (takes several hours). To make plots, run the Jupyter notebook.

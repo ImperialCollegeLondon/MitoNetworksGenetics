@@ -1,0 +1,12 @@
+#!/bin/sh
+#PBS -N QC
+#PBS -l walltime=71:00:00
+#PBS -l select=1:ncpus=1:mem=4gb
+module load anaconda2/personal
+
+cp $PBS_O_WORKDIR/det_qc_sweep.py $TMPDIR
+
+python det_qc_sweep.py
+
+cp * $PBS_O_WORKDIR
+
