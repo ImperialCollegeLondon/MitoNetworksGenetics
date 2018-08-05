@@ -24,8 +24,7 @@ $ pip install ./dist/mitonetworks-0.0.1.tar.gz
 
 ### Alternative_control_laws
 
-- `Param_sweeps` : Parameter sweeps for a set of replication/degradation rate functions, Figure XXX
-- `Vh_proofs` : Heteroplasmy variance proofs for a set of feedback control laws
+- `Param_sweeps` : Parameter sweeps for a set of replication/degradation rate functions, Figures S2 E-L
 
 ### mitonetworks
 
@@ -33,27 +32,33 @@ $ pip install ./dist/mitonetworks-0.0.1.tar.gz
 
 ### Simple_Network_Process
 
-- Deterministic treatment of a simple network process, Figure XXX
+- Deterministic treatment of a simple network process, Figure S1
 
 ### Linear_Feedback_Control
 
-- ` Ablate_fusion_fission` : Deterministic analysis reducing the fusion and fission rates, Figure XXX
-- `Deterministic_phase_portrait` : Generates Figure XXX
-- `Deterministic_Steady_State`: Mathematica notebook to find deterministic steady state
-- `Nominal_parametrization` : Python code to find nominal parameterization 
-- `Proof_Vh` : Analytic treatment of linear feedback control proving V(h) formula 
-- `Quality_control` : Exploration of selective mitophagy and selective fusion, Figure XXX
-- `Stochastic_analysis` : Python code to perform parameter sweeps, Figure XXX
+- ` Ablate_fusion_fission` : Figure 2D
+- `Deterministic_phase_portrait` : Figures 2A-C
+- `Quality_control/sel_fus/Analysis`: Figure 3A
+- `Quality_control/QC_sweep`: Figure 3A inset
+- `Quality_control/sel_deg/Analysis : Figure 3B
+- `Stochastic_analysis/Nominal_parametrization` : Figure 2E-H
+- `Stochastic_analysis/mu_sweep`: Figure 2I
+- `Stochastic_analysis/kappa_sweep`: Figure 2J
+- `Stochastic_analysis/delta_sweep`: Figure 2K
+- `Stochastic_analysis/network_and_b_sweep/Post_processing/Analysis`: Figure 2L
+- `Stochastic_analysis/network_and_b_sweep/Post_processing/Analysis` : Figure S2A,B
+- `Stochastic_analysis/xi_sweep/Analysis` : Figure S2C
+- `Stochastic_analysis/network_and_b_sweep/Post_processing/Analysis` : Figure S2D
 
- ### Moran_infinite_sites
+### Moran_infinite_sites
 
- - Exploration of the infinite sites Moran model, Figure XXX
+ - Exploration of the infinite sites Moran model, Figure B1.
 
- ### Simple_moran
+### Simple_moran
 
- - Exploration of a biallelic Moran model, Figure XXX
+ - Exploration of a biallelic Moran model, Figure S3
 
- ### Simple_Network_Process
+### Simple_Network_Process
 
  - Exploration of a network process with constant rates, Figure XXX
 
