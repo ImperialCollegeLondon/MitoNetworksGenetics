@@ -1,8 +1,6 @@
 # MitoNetworksGenetics
 
-Code associated with [INSERT TITLE] 
-
-[TO DO: Assign figure numbers to readme]
+Code associated with [INSERT TITLE/LINK TO PAPER] 
 
 ## Installation
 
@@ -40,7 +38,7 @@ $ pip install ./dist/mitonetworks-0.0.1.tar.gz
 - `Deterministic_phase_portrait` : Figures 2A-C
 - `Quality_control/sel_fus/Analysis`: Figure 3A
 - `Quality_control/QC_sweep`: Figure 3A inset
-- `Quality_control/sel_deg/Analysis : Figure 3B
+- `Quality_control/sel_deg/Analysis` : Figure 3B
 - `Stochastic_analysis/Nominal_parametrization` : Figure 2E-H
 - `Stochastic_analysis/mu_sweep`: Figure 2I
 - `Stochastic_analysis/kappa_sweep`: Figure 2J
@@ -58,14 +56,13 @@ $ pip install ./dist/mitonetworks-0.0.1.tar.gz
 
  - Exploration of a biallelic Moran model, Figure S3
 
-### Simple_Network_Process
-
- - Exploration of a network process with constant rates, Figure XXX
-
 ## Proofs
 
-To summarise the locations of the proofs in the paper [To do: complete table]
+The following table summarizes the locations of the proofs in the paper 
 
 | Formula | Description | Directory|
 |:-------:|:-----------:|:--------:|
-|<a href="https://www.codecogs.com/eqnedit.php?latex=\mathbb{V}(h))" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\mathbb{V}(h)" title="\mathbb{V}(h))" /></a> | LFC |	`Linear_Feedback_Control/Proof_Vh` |
+<a href="http://www.codecogs.com/eqnedit.php?latex=\mathbb{V}(h)=f_s&space;\frac{2\mu&space;t}{n}h(1-h)" target="_blank"><img src="http://latex.codecogs.com/gif.latex?\mathbb{V}(h)=f_s&space;\frac{2\mu&space;t}{n}h(1-h)" title="\mathbb{V}(h)=f_s \frac{2\mu t}{n}h(1-h)" /></a> | LFC, Eq.(12) |	`Linear_Feedback_Con1trol/Proof_Vh` |
+<a href="http://www.codecogs.com/eqnedit.php?latex=\mathbb{V}(h)=f_s&space;\frac{2\mu&space;t}{n}h(1-h)" target="_blank"><img src="http://latex.codecogs.com/gif.latex?\mathbb{V}(h)=f_s&space;\frac{2\mu&space;t}{n}h(1-h)" title="\mathbb{V}(h)=f_s \frac{2\mu t}{n}h(1-h)" /></a>  | Alternative_control_laws, Eq.(80) | `Alternative_control_laws/Vh_proofs`
+<a href="http://www.codecogs.com/eqnedit.php?latex=\mathbb{V}(h)=&space;\frac{2\mu&space;t}{n}h(1-h)" target="_blank"><img src="http://latex.codecogs.com/gif.latex?\mathbb{V}(h)=&space;\frac{2\mu&space;t}{n}h(1-h)" title="\mathbb{V}(h)= \frac{2\mu t}{n}h(1-h)" /></a>  | Alternative_control_laws, Eq.(80) | `Alternative_control_laws/Vh_proofs`
+<a href="http://www.codecogs.com/eqnedit.php?latex=\mathbb{V}(h)=f_s&space;\frac{2\mu&space;t}{n}h(1-h)" target="_blank"><img src="http://latex.codecogs.com/gif.latex?\mathbb{V}(h)=f_s&space;\frac{2\mu&space;t}{n}h(1-h)" title="\mathbb{V}(h)=f_s \frac{2\mu t}{n}h(1-h)" /></a> | <a href="http://www.codecogs.com/eqnedit.php?latex=X_S&space;\rightarrow&space;X_S&space;&plus;&space;X_S" target="_blank"><img src="http://latex.codecogs.com/gif.latex?X_S&space;\rightarrow&space;X_S&space;&plus;&space;X_S" title="X_S \rightarrow X_S + X_S" /></a> , Eq.(12)| `Alternative_model_vh_proof`
