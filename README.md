@@ -58,7 +58,7 @@ $ pip install ./dist/mitonetworks-0.0.1.tar.gz
 
 ## Proofs
 
-The following table summarizes the locations of the proofs in the paper 
+The following table summarizes the locations of the Mathematica proofs in the paper 
 
 | Formula | Description | Directory|
 |:-------:|:-----------:|:--------:|
