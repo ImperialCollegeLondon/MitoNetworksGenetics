@@ -36,9 +36,10 @@ $ pip install ./dist/mitonetworks-0.0.1.tar.gz
 - `Stochastic_analysis/kappa_sweep/Analysis`: Figure 2J
 - `Stochastic_analysis/mu_sweep/Analysis`: Figure 2I
 - `Stochastic_analysis/network_and_b_sweep/Post_processing/Analysis` : Figure S2A,B,D
-- `Stochastic_analysis/network_and_b_sweep/Post_processing/Analysis`: Figure 2L & inset
+- `Stochastic_analysis/network_and_b_sweep/Post_processing/Analysis`: Figure 2L 
 - `Stochastic_analysis/Nominal_parametrization/Analysis` : Figure 2E-H
 - `Stochastic_analysis/xi_sweep/Analysis` : Figure S2C
+- `Stochastic_analysis/network_and_b_sweep/Post_processing/Analysis`: Figure S4
 
 ### Moran_infinite_sites
 
