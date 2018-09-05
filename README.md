@@ -1,7 +1,7 @@
 # MitoNetworksGenetics
 
 Code associated with the article "Mitochondrial network fragmentation modulates mutant mtDNA accumulation independently of absolute fission-fusion rates". See
-https://www.biorxiv.org/content/early/2018/09/05/409128.article-metrics
+https://www.biorxiv.org/content/early/2018/09/05/409128
 
 ## Installation
 
