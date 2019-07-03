@@ -1,7 +1,7 @@
 # MitoNetworksGenetics
 
-Code associated with the article "Mitochondrial network fragmentation modulates mutant mtDNA accumulation independently of absolute fission-fusion rates". See
-[Insert URL]
+Code associated with the article "Mitochondrial Network State Scales mtDNA Genetic Dynamics". See
+https://doi.org/10.1534/genetics.119.302423
 
 ## Installation
 
