@@ -23,7 +23,7 @@ $ pip install ./dist/mitonetworks-0.0.1.tar.gz
 
 ### Alternative_control_laws
 
-- `Param_sweeps` : Parameter sweeps for a set of replication/degradation rate functions, Figures S2I-P
+- `Param_sweeps` : Parameter sweeps for a set of replication/degradation rate functions, Figures S4B-I
 
 
 ### Linear_Feedback_Control
@@ -31,15 +31,15 @@ $ pip install ./dist/mitonetworks-0.0.1.tar.gz
 - `Ablate_fusion_fission` : Figure S2B
 - `Deterministic_phase_portrait` : Figures 2A,B and Figure S2A
 - `Quality_control/sel_fus/Analysis`: Figure 4A
-- `Quality_control/QC_sweep`: Figure S4
+- `Quality_control/QC_sweep`: Figure S7
 - `Quality_control/sel_deg/Analysis` : Figure 4B
 - `Stochastic_analysis/delta_sweep/Post_processing/Analysis`: Figure 2G
 - `Stochastic_analysis/Fast_turnover`: Figure S5
 - `Stochastic_analysis/kappa_sweep/Analysis`: Figure 2F
 - `Stochastic_analysis/mu_sweep/Analysis`: Figure 2E
-- `Stochastic_analysis/network_and_b_sweep/Post_processing/Analysis`: Figure S2D,E,F,H and Figure 2H
-- `Stochastic_analysis/Nominal_parametrization/Analysis` : Figure 2C,D and Figure S2C
-- `Stochastic_analysis/xi_sweep/Analysis` : Figure S2G
+- `Stochastic_analysis/network_and_b_sweep/Post_processing/Analysis`: Figure S3B,C,D,E, Figure S4A, and Figure 2H
+- `Stochastic_analysis/Nominal_parametrization/Analysis` : Figure 2C,D and Figure S3A
+- `Stochastic_analysis/xi_sweep/Analysis` : Figure S3E
 
 ### Moran_infinite_sites
 
